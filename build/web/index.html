@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="libs/jquery-2.1.1.js"></script>
+        <link rel="stylesheet" href="index.css"/>
+        <link rel="stylesheet" href="libs/jquery.mobile-1.4.5.css"/>
+        <script src="libs/jquery.mobile-1.4.5.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <!----------------------------- Home Page ----------------------------->
+       <div data-role="page" id="homepage">
+          <div data-role="header" data-position="fixed">
+              <h1>Home Page</h1>
+          </div>
+          
+          <div data-role="main" class="ui-content">
+             <h2>Memory Game</h2>
+              
+              <a href="new-game.html" class="ui-btn ui-corner-all">Create New Game</a>
+              <a href="#gamelistpage" class="ui-btn ui-corner-all">Play Game</a>
+              <!--0205 0330pm-->
+              <a href="#common-view-all-games-page" class="ui-btn ui-corner-all">Common View</a>
+              <a href="#top-score-page" class="ui-btn ui-corner-all">Top Score</a>
+              <!--0204 0809am Logout button-->
+              <form method="post" action="logout" data-ajax="false">
+                  <input type="submit" value="Logout Button">
+              </form>
+              
+          </div>
+          
+          <!--Test Area-->
+          
+          <div hidden data-role="main" class="ui-content">
+              <p hidden>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos suscipit maxime nulla nam magnam minus quis enim incidunt delectus assumenda est dicta, facere accusamus laudantium in iusto cum iure!</p>
+              
+              <div hidden id="counter">0</div>
+              <button hidden id="countBtn" data-role="button">Add</button>
+              <a hidden href="#page2" class="ui-btn ui-icon-action ui-btn-icon-left" data-transition="slide">Page 2</a>
+              <a hidden href="#dlgBox" class="ui-btn ui-icon-action ui-btn-icon-left" data-rel="popup" data-position-to="window">Dialog Box</a>
+
+          </div>
+          
+          <div hidden data-role="popup" id="dlgBox">
+              <div data-role="header">
+                  <h1>Dialog Box</h1>
+              </div>
+              <div data-role="main" class="ui-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis possimus alias exercitationem reprehenderit, reiciendis est, inventore accusamus distinctio soluta obcaecati ipsam in minus asperiores adipisci tempora! Eaque dignissimos sint incidunt.</p>
+              </div>
+              
+              <a data-rel="back" data-role="button" class="ui-button">Dismiss</a>
+          </div>
+          
+
+          <div data-role="footer" data-position="fixed">
+              <h3>Team 15</h3>
+          </div>
+          
+            <!--Test Area Ends Here-->
+       </div>
+       <!------------------------ Home Page Ends Here ------------------------>
+       
+       
+       <!----------------------------- Game List Page ----------------------------->
+       <div data-role="page" id="gamelistpage">
+          <div data-role="header" data-position="fixed">
+              <h1>All Games</h1>
+          </div>
+          
+          <div data-role="main" class="ui-content" id="gamelist-content">
+             
+              
+              <a data-rel="back" data-role="button" class="ui-button">Back</a>
+              
+              
+                                 <!-- ListView here-->
+                                 
+            <div id="listview">
+                <ul data-role="listview" id="games" data-inset="true">
+                
+                
+                </ul>
+            </div>
+             
+            
+             
+              
+          </div>
+          
+          <div data-role="footer" data-position="fixed">
+              <h3>Team 15</h3>
+          </div>
+
+       </div>
+       <!------------------------ Game List Page Ends Here ------------------------>
+       
+       
+       
+       
+       <!----------------------------- Common View List Page //0205_0315pm----------------------------->
+       <div data-role="page" id="common-view-all-games-page">
+          <div data-role="header" data-position="fixed">
+              <h1>Common View</h1>
+          </div>
+          
+          <div data-role="main" class="ui-content" id="gamelist-content">
+              
+              
+            <a data-rel="back" data-role="button" class="ui-button">Back</a>
+                                 <!-- ListView here-->
+            
+            <div id="commonview-listview">
+                <ul data-role="listview" id="common-view-games-list-view" data-inset="true">
+                
+                
+                </ul>
+            </div>
+             
+            
+             
+              
+          </div>
+          
+          <div data-role="footer" data-position="fixed">
+              <h3>Team 15</h3>
+          </div>
+
+       </div>
+       <!------------------------ Common View List Page Ends Here ------------------------>
+       
+       
+       
+       
+       
+       
+       
+       
+       <!----------------------------- Page2 for testing use ----------------------------->
+       <div data-role="page" id="page2">
+           <div data-role="header">
+              <a class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-rel="back" data-transition="slide">No text</a>
+               <h1>Page 2</h1>
+           </div>
+           <div data-role="main" class="ui-content">
+               <h2>Page 2</h2>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita pariatur consequuntur quasi, consequatur quos dolores enim cum beatae labore veniam minus, veritatis nulla eius. In, nesciunt, quia. Pariatur, ratione atque.
+               </p>
+               <br/>
+               
+           </div>
+       </div>
+       
+       
+       
+       
+       <!------------------------ Page2 for testing use ends here ------------------------>
+       
+       
+       
+       
+       <!------------------------ Game Zone Page (prototype) ------------------------>
+       
+       <div id="gameZone" data-role="page">
+          <div data-role="header" data-position="fixed">
+            <h3>Memory Game</h3>
+          </div>
+          <div role="main" class="ui-content">
+           
+              <a data-rel="back" data-role="button" id="leaveGameZone" class="ui-button">Back</a>
+              
+           <!-- Player Input Form -->
+           <h2 id="gameZoneGameIdTitle"></h2>
+           <div class="ui-field-contain">
+               
+               <pre hidden id="output"></pre>
+               
+               <input  type="hidden" id="first-input" class="user-input" data-clear-btn="true">
+               
+               <input  type="hidden" id="second-input" class="user-input" data-clear-btn="true">
+               
+               
+           </div>
+           
+           
+           
+           <div class="ui-grid-c">
+               <div class="ui-block-a"><button id="opt0" value="0" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-b"><button id="opt1" value="1" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-c"><button id="opt2" value="2" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-d"><button id="opt3" value="3" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a"><button id="opt4" value="4" class="custom-btn" style="height:118px;width: 87px"></button></div><!--each column in second row-->
+               <div class="ui-block-b"><button id="opt5" value="5" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-c"><button id="opt6" value="6" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-d"><button id="opt7" value="7" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a"><button id="opt8" value="8" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-b"><button id="opt9" value="9" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-c"><button id="opt10" value="10" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-d"><button id="opt11" value="11" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a"><button id="opt12" value="12" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-b"><button id="opt13" value="13" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-c"><button id="opt14" value="14" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-d"><button id="opt15" value="15" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a"><button id="opt16" value="16" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-b"><button id="opt17" value="17" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-c"><button id="opt18" value="18" class="custom-btn" style="height:118px;width: 87px"></button></div>
+               <div class="ui-block-d"><button id="opt19" value="19" class="custom-btn" style="height:118px;width: 87px"></button></div>
+            </div>
+           
+           <button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Submit</button>
+           
+
+            
+            <input  type="hidden" id="input-show-answer" value="none">
+            <br/>
+            <input  type="hidden" id="input-show-flipped" value="none">
+            
+          </div>
+          <div data-role="footer" data-position="fixed">
+            <h3>Team 15</h3>
+          </div>
+        </div>
+       
+       
+       
+       
+       <!------------------------ Game Zone Page (prototype) ends here ------------------------>
+       
+       
+       <!--------------------- Common View for Game Page  //0205_0317pm ---------------------->
+       
+       <div id="common-view-for-game" data-role="page">
+          <div data-role="header" data-position="fixed">
+            <h3 id="common-view-title">Common View for GameID : </h3>
+          </div>
+          <div role="main" class="ui-content">
+           <a data-rel="back" data-role="button" class="ui-button">Back</a>
+           <!-- common-view-for-game main content-->
+           
+           <pre hidden id="common-view-output-1"></pre>
+           <pre hidden id="common-view-output-2"></pre>
+           <pre id="common-view-output-3"></pre>
+           <pre hidden id="common-view-output-4"></pre>
+           
+           <!--
+           <div class="ui-grid-d">
+               <div class="ui-block-a" ><img id="idx0"></div>
+               <div class="ui-block-b" ><img id="idx1"></div>
+               <div class="ui-block-c" ><img id="idx2"></div>
+               <div class="ui-block-d" ><img id="idx3"></div>
+               <div class="ui-block-e" ><img id="idx4"></div>
+            </div>
+            <div class="ui-grid-d">
+               <div class="ui-block-a"><img id="idx5"></div>
+               <div class="ui-block-b"><img id="idx6"></div>
+               <div class="ui-block-c"><img id="idx7"></div>
+               <div class="ui-block-d"><img id="idx8"></div>
+               <div class="ui-block-e"><img id="idx9"></div>
+            </div>
+            <div class="ui-grid-d">
+               <div class="ui-block-a" ><img id="idx10"></div>
+               <div class="ui-block-b" ><img id="idx11"></div>
+               <div class="ui-block-c" ><img id="idx12"></div>
+               <div class="ui-block-d" ><img id="idx13"></div>
+               <div class="ui-block-e" ><img id="idx14"></div>
+            </div>
+            <div class="ui-grid-d">
+               <div class="ui-block-a" ><img id="idx15"></div>
+               <div class="ui-block-b" ><img id="idx16"></div>
+               <div class="ui-block-c" ><img id="idx17"></div>
+               <div class="ui-block-d" ><img id="idx18"></div>
+               <div class="ui-block-e" ><img id="idx19"></div>
+            </div>
+            -->
+            
+            <div class="ui-grid-c"><!--how many columns, c=4-->
+               <div class="ui-block-a" ><img id="idx0"></div> <!--each column in first row-->
+               <div class="ui-block-b" ><img id="idx1"></div>
+               <div class="ui-block-c" ><img id="idx2"></div>
+               <div class="ui-block-d" ><img id="idx3"></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a"><img id="idx4"></div><!--each column in second row-->
+               <div class="ui-block-b"><img id="idx5"></div>
+               <div class="ui-block-c"><img id="idx6"></div>
+               <div class="ui-block-d"><img id="idx7"></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a" ><img id="idx8"></div>
+               <div class="ui-block-b" ><img id="idx9"></div>
+               <div class="ui-block-c" ><img id="idx10"></div>
+               <div class="ui-block-d" ><img id="idx11"></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a" ><img id="idx12"></div>
+               <div class="ui-block-b" ><img id="idx13"></div>
+               <div class="ui-block-c" ><img id="idx14"></div>
+               <div class="ui-block-d" ><img id="idx15"></div>
+               
+            </div>
+            <div class="ui-grid-c">
+               <div class="ui-block-a" ><img id="idx16"></div>
+               <div class="ui-block-b" ><img id="idx17"></div>
+               <div class="ui-block-c" ><img id="idx18"></div>
+               <div class="ui-block-d" ><img id="idx19"></div>
+               
+            </div>
+            
+          </div>
+          <div data-role="footer" data-position="fixed">
+            <h3>Team 15</h3>
+          </div>
+        </div>
+       
+       
+       
+       
+       <!------------------------ COMMON VIEW Page ends here ------------------------>
+       
+       
+       
+       <!----------------------------- Top Score Page ----------------------------->
+       <div data-role="page" id="top-score-page">
+           <div data-role="header">
+              <a class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all" data-rel="back" data-transition="slide">No text</a>
+               <h1>Memory Game</h1>
+           </div>
+           <div data-role="main" class="ui-content">
+               <h2>Top 10 Score</h2>
+               
+             <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow gk-decorate" id="top-score-table" is="jqm-table">
+              <thead>
+                <tr>
+                  <th data-priority="1">Player's Name</th>
+                  <th data-priority="1">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+               
+               
+               <br/>
+               
+           </div>
+       </div>
+       
+       
+       
+       
+       <!------------------------ Top Score Page Ends here ------------------------>
+       
+       
+       
+       
+       
+    </body>
+</html>

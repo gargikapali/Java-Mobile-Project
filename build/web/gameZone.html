@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="libs/jquery-2.1.1.js"></script>
+        <link rel="stylesheet" href="libs/jquery.mobile-1.4.5.css"/>
+        <script src="libs/jquery.mobile-1.4.5.js"></script>
+        <script src="gameZone.js"></script>
+    </head>
+    <body>
+       <div id="gameZone" data-role="page">
+  <div data-role="header" data-position="fixed">
+    <h3>Header</h3>
+  </div>
+  <div role="main" class="ui-content">
+   
+   <!-- Get Player Input -->
+   <h2 id="gameZoneGameIdTitle"></h2>
+   <div class="ui-field-contain"></div>
+   
+   
+    <input type="text" name id="input1" placeholder="input 1" data-clear-btn="true">
+    <input type="text" name id="input2" placeholder="input 2" data-clear-btn="true">
+    <a class="ui-btn">Submit</a>
+    
+    
+    
+    
+    <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow gk-decorate" id="gk-22x8Yb" is="jqm-table">
+      <thead>
+        <tr>
+          <th data-priority="1">Player ID</th>
+          <th data-priority="1">Points</th>
+          <th data-priority="1">Trial</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>2011</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>2012</td>
+          <td>11</td>
+        </tr>
+      </tbody>
+      
+    </table>
+    <h2 is="gk-text">Answer</h2>
+    <h4 is="gk-text">answer:</h4>
+    <h2 is="gk-text">Flipped</h2>
+    <h4 is="gk-text">flipped:</h4>
+  </div>
+  <div data-role="footer" data-position="fixed">
+    <h3>Footer</h3>
+  </div>
+</div>
+       
+        
+    </body>
+</html>
